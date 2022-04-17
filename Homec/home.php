@@ -21,7 +21,7 @@
 		var n = new Function("return (Math.random()*190).toFixed(0)");
 
 		var c = "rgb(" + n() + ", " + n() + "," + n() + ")";
-		var template = "<strong style=' color: font-family: 'Poppins', sans-serif; background: #333; color: #fff; border-radius: 18px 18px 0 18px; "+ c +" '>" + +"</strong>: ";
+		var template = "<strong style=' color: font-family: 'Poppins', sans-serif; background: #333; color: #fff; border-radius: 18px 18px 0 18px; "+ c +" '>" + 'Elian' + "</strong>: ";
 
 		comet.connect(function(data) { $("#history").append(data.message) + "<br>"; });
 
