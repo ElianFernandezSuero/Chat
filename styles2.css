@@ -1,0 +1,45 @@
+body{
+    background-image: url(Fondo2.png);
+    background-size: 100%;
+}
+.container-log{
+    position: relative;
+    margin-left: 37%;
+    margin-top: 18%;
+    
+    ;
+}
+
+.container_input{
+    border: 20px;
+    border-radius: 2px;
+    padding: 3px;
+    padding-left: 15px;
+    width: 40%;
+    height: 40px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-family: 'Sarabun', sans-serif;
+    
+}
+
+#boton1{
+    font-family: Roboto;
+    height: 40px;
+    padding: 2px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    border-right-width: 0px;
+    width: 380px;
+}
+
+h2{ 
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    bottom: 30px;
+    margin-left: 170px;
+}
+

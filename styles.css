@@ -1,43 +1,68 @@
 body{
-    background-image: url(Fondo2.png);
+    background-image: url(Fondochat.png);
     background-size: 100%;
 }
-.container-log{
+
+#Contenedorchat{
+    margin-left: 5%;
+    margin-top: 0%;
+    width: 90% ;
+    height: 900px;
+    background: rgba(34, 35, 39, 0.89);
+    
+}
+
+#chatslaterales{
+    background: #0E0D11;
+    display:block;
+    float: left;
+    width: 5%;
+    height: 100%;
+    z-index: 2;
     position: relative;
-    margin-left: 37%;
-    margin-top: 18%;
-    ;
 }
 
-.container_input{
-    border: 20px;
-    border-radius: 2px;
-    padding: 3px;
-    padding-left: 15px;
-    width: 40%;
-    height: 40px;
-    font-family: Poppins;
-    font-size: 14px;
-    font-family: 'Sarabun', sans-serif;
+#titulodgrupo{
+    display: flex;
+    background: #1C1B1F;
+    width: 100%;
+    height: 7%;
+    position: relative;
+    bottom: 100%;
+    z-index: 1;
 }
 
-#boton1{
-    font-family: Roboto;
-    height: 40px;
-    padding: 2px;
-    border-left-width: 0px;
-    border-top-width: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-bottom: 0px;
-    border-right-width: 0px;
-    width: 380px;
+#contenedordetexto{
+    display: flex;
+    background: #1C1B1F;
+    width: 100%;
+    height: 7%;
+    position: relative;
+    bottom: 14%;
+    z-index: 1;
 }
 
-h2{ 
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    bottom: 30px;
-    margin-left: 170px;
+#iconusuario{
+    margin-top: 10px;
+    margin-left: 13px;
+    background-image: url(iconos/Ellipse1.png);
 }
+
+#iconusuario2{
+    margin-top: 30px;
+    margin-left: 17px;
+}
+
+#iconmenu{
+    margin-top: 30px;
+    margin-left: 22px;
+}
+
+#iconbuscar{
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+
+
 

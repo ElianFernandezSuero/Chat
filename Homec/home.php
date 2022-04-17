@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,43 +16,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Inconsolata:wght@200&family=Inria+Sans:wght@300&family=Istok+Web&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-<!-- Js -->
-    <script type="text/javascript">
-		var comet = new AjaxPush('modulos/lis.php', 'modulos/msgchat.php');
-		var n = new Function("return (Math.random()*190).toFixed(0)");
+ 
+<?php 
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+            if(mysqli_num_rows($sql) > 0){
+              $row = mysqli_fetch_assoc($sql);
+            }
+          ?>
+<a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Cerrar sesion</a>
 
-		var c = "rgb(" + n() + ", " + n() + "," + n() + ")";
-		var template = "<strong style=' color: font-family: 'Poppins', sans-serif; background: #333; color: #fff; border-radius: 18px 18px 0 18px; "+ c +" '>" + 'Elian' + "</strong>: ";
-
-		comet.connect(function(data) { $("#history").append(data.message) + "<br>"; });
-
-		var send = function() {
-			comet.doRequest({ message: template + $("#message").val() + "<br>" }, function(){
-				$("#message").val('').focus();
-			})
-		}
-	</script>
-<!-- Js -->
-
-        <div id="Contenedorchat">
+<div id="Contenedorchat" style="
+    margin-top: 0px;
+">
         <div id="chatslaterales">
             <img src="iconos/Ellipse1.png" alt="usuario" id="iconusuario" style="cursor: pointer;">
-            <img src="iconos/Menu.png" alt="abremenu"id="iconmenu"style="cursor: pointer;">
+            <img src="iconos/Menu.png" alt="abremenu" id="iconmenu" style="cursor: pointer;">
             <br>
-            <img src="iconos/Buscar.png" alt="Buscador de grupos"id="iconbuscar"style="cursor: pointer;">
-            <img src="iconos/Ellipse2.png" alt="Grupo"id="iconusuario2"style=" cursor: pointer;">
-            <img src="iconos/Ellipse2.png" alt="Grupo"id="iconusuario2"style=" cursor: pointer;">
-            <img src="iconos/Ellipse2.png" alt="Grupo"id="iconusuario2"style=" cursor: pointer;">
-            <img src="iconos/Ellipse2.png" alt="Grupo"id="iconusuario2"style=" cursor: pointer;">
+            <img src="iconos/Buscar.png" alt="Buscador de grupos" id="iconbuscar" style="cursor: pointer;">
+            <img src="iconos/Ellipse2.png" alt="Grupo" id="iconusuario2" style=" cursor: pointer;">
+            <img src="iconos/Ellipse2.png" alt="Grupo" id="iconusuario2" style=" cursor: pointer;">
+            <img src="iconos/Ellipse2.png" alt="Grupo" id="iconusuario2" style=" cursor: pointer;">
+            <img src="iconos/Ellipse2.png" alt="Grupo" id="iconusuario2" style=" cursor: pointer;">
         </div>
-        <div id="history" style="margin-left: 150px; margin-top: 0px; position:relative; top:20%; min-height: 500px; max-height: 500px; overflow-y: auto;"></div>
+        <div id="history" class="chat-box" style="margin-left: 150px;margin-top: 0px;position:relative;top: 65px;/* min-height: 500px; *//* max-height: 500px; */overflow-y: auto;width: 1450px;height: 774px;">
+        <div class="wrapper">
+    <section class="chat-area">
+      
+        <?php 
+          $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
+          $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$user_id}");
+          if(mysqli_num_rows($sql) > 0){
+            $row = mysqli_fetch_assoc($sql);
+          }else{
+            
+          }
+        ?>
         
+      <div class="chat-box">
+
+      </div>
+      
+    </section>
+  </div>
+
+  <script src="javascript/chat.js"></script>
+
+    </div>
         <div id="titulodgrupo">
 
         </div>
 
-        <form action="" style="position: relative;bottom: 12.5;bottom: 14%;">
+        <form action="#" class="typing-area" style="position: relative;bottom: 12.5;bottom: 14%;">
         <div id="contenedordetexto">
             <div id="inputs" style="padding-left: 90px;width: 100%;padding-bottom: 7px;">
                 
@@ -58,7 +74,7 @@
 
                 <img src="iconos/emoji1.svg" alt="insertar SVG con la etiqueta image" style="margin-left: 18px; margin-right: 18px;">
 
-                <input type="text" autofocus="" autocomplete="off" placeholder=" Escribe tu mensaje..." id="message" style="outline: none; position:relative; bottom: 50%; padding-left: 20px; border: 0px; width: 80%; height: 60%;margin-left: ;border-radius:10px;bottom: 11px; background: #2E2F34; color:#DCDCDC; font-family: 'Sarabun', sans-serif; font-size: 16px;">
+                <input type="text" autofocus="" autocomplete="off" placeholder=" Escribe tu mensaje..." class="message" style="outline: none; position:relative; bottom: 50%; padding-left: 20px; border: 0px; width: 80%; height: 60%;margin-left: ;border-radius:10px;bottom: 11px; background: #2E2F34; color:#DCDCDC; font-family: 'Sarabun', sans-serif; font-size: 16px;">
                 
                 <img src="iconos/enviar.svg" onclick="send()" onkeyup="Enviar" type="submit" id="Buscar" alt="insertar SVG con la etiqueta image" style="margin-left: 16px; margin-top:18px; cursor: pointer;">
             </div>
@@ -66,5 +82,6 @@
         </form>
 
     </div>
+    <script src="javascript/chat.js"></script>
 </body>
 </html>
