@@ -38,46 +38,42 @@
             <img src="iconos/Ellipse2.png" alt="Grupo" id="iconusuario2" style=" cursor: pointer;">
             <img src="iconos/Ellipse2.png" alt="Grupo" id="iconusuario2" style=" cursor: pointer;">
         </div>
-        <div id="history" class="chat-box" style="margin-left: 150px;margin-top: 0px;position:relative;top: 65px;/* min-height: 500px; *//* max-height: 500px; */overflow-y: auto;width: 1450px;height: 774px;">
+        <div id="history" class="chat-box" style="margin-left: 150px;margin-top: 0px; position:relative; top: 63px; overflow-y: auto;width: 1450px;height: 774px;padding-right: 64px;padding-top: 0px;">
         <div class="wrapper">
     <section class="chat-area">
-      <header>
+      
         <?php 
           $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
           $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$user_id}");
           if(mysqli_num_rows($sql) > 0){
             $row = mysqli_fetch_assoc($sql);
           }else{
-            
+            header("location: ");
           }
         ?>
         
-      <div class="chat-box">
-
-      </div>
       
     </section>
   </div>
 
-  <script src="javascript/chat.js"></script>
+  
 
     </div>
         <div id="titulodgrupo">
 
         </div>
 
-        <form action="#" class="typing-area" style="position: relative;bottom: 12.5;bottom: 14%;">
+        <form action="" class="typing-area" name="typing-area" style="position: relative;bottom: 12.5;bottom: 14%;">
         <div id="contenedordetexto">
             <div id="inputs" style="padding-left: 90px;width: 100%;padding-bottom: 7px;">
                 
                 <img src="iconos/adjunto1.svg" alt="insertar SVG con la etiqueta image" style="margin-left: 16px;"> 
 
                 <img src="iconos/emoji1.svg" alt="insertar SVG con la etiqueta image" style="margin-left: 18px; margin-right: 18px;">
-
-                <input type="text" autofocus="" autocomplete="off" placeholder=" Escribe tu mensaje..." c="message" style="outline: none; position:relative; bottom: 50%; padding-left: 20px; border: 0px; width: 80%; height: 60%;margin-left: ;border-radius:10px;bottom: 11px; background: #2E2F34; color:#DCDCDC; font-family: 'Sarabun', sans-serif; font-size: 16px;">
-                
-                <img src="iconos/enviar.svg" onclick="send()" onkeyup="Enviar" type="submit" id="Buscar" alt="insertar SVG con la etiqueta image" style="margin-left: 16px; margin-top:18px; cursor: pointer;">
-            </div>
+                <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
+                <input type="text" autofocus=""  autocomplete="off" placeholder=" Escribe tu mensaje..." name="message" class="input-field" style="outline: none; position:relative; bottom: 50%; padding-left: 20px; border: 0px; width: 80%; height: 60%;margin-left: ;border-radius:10px;bottom: 11px; background: #2E2F34; color:#DCDCDC; font-family: 'Sarabun', sans-serif; font-size: 16px;">
+                <button style="background-color: transparent; border: none;"><img src="iconos/enviar.svg"  type="submit" class="Buscar" alt="insertar SVG con la etiqueta image" style="margin-left: 16px; margin-top:18px; cursor: pointer; background-color: transparent !important;"></button>
+                </div>
         </div>
         </form>
 
@@ -85,3 +81,4 @@
     <script src="javascript/chat.js"></script>
 </body>
 </html>
+

@@ -1,6 +1,7 @@
 body{
     background-image: url(Fondochat.png);
     background-size: 100%;
+    background-repeat:none ;
 }
 
 #Contenedorchat{
@@ -64,6 +65,57 @@ body{
 
 }
 
+.users-list a{
+    display: flex;
+    align-items: center;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #e6e6e6;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
 
+  .users header img{
+    height: 45px;
+    width: 45px;
+  }
 
+  .chat-area header img{
+    height: 45px;
+    width: 45px;
+    margin: 0px 0px;
+  }
+  .users-list a img {
+    height: 58px;
+    position: relative ;
+    width: 60px;
+    border-radius: 100%;
+    left: 104px;
+    z-index: 2;
+    cursor: pointer;
+    bottom: 762px;
+}
 
+.wrapper img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.chat.incoming img{
+    height: 58px;
+}
+
+.chat-box::-webkit-scrollbar {
+    width: 10px;
+    background:  #1C1B1F;
+}
+.chat-box::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255, .2);
+border-radius: 5px;
+border-right: 1px solid #17181a;
+}
+
+:is(.users, .users-list) .content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
