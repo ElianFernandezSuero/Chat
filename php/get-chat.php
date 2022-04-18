@@ -1,4 +1,5 @@
 <?php 
+
     session_start();
     if(isset($_SESSION['unique_id'])){
         include_once "config.php";
@@ -14,6 +15,7 @@
                 if($row['outgoing_msg_id'] === $outgoing_id){
                     $output .= '<div class="chat outgoing">
                                 <div class="details">
+                                 
                                     <p>'. $row['msg'] .'</p>
                                 </div>
                                 </div>';
@@ -21,13 +23,14 @@
                     $output .= '<div class="chat incoming">
                                 <img src="php/images/'.$row['img'].'" alt="">
                                 <div class="details">
+                                <p>' .$row['fname']. " "  .$row['lname'] .'</p>
                                     <p>'. $row['msg'] .'</p>
                                 </div>
                                 </div>';
                 }
             }
         }else{
-            $output .= '<div class="text">No messages are available. Once you send message they will appear here.</div>';
+            $output .= '<div class="text">No hay mensajes disponibles. Escribe un mensaje.</div>';
         }
         echo $output;
     }else{
