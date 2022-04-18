@@ -16,20 +16,13 @@
               $row = mysqli_fetch_assoc($sql);
             }
           ?>
-          <img style="position: relative; bottom: 891px; width: 60px; border-radius: 100%; left: 104px; z-index: 2; cursor: pointer;"src="php/images/<?php echo $row['img']; ?>" alt="">
-         
+          
+          <div class="usuarioimg ">
+          <img style="position: relative; bottom: 891px; width:70px; height: 70px; border-radius: 100%; left: 100px; z-index: 2; cursor: pointer;"src="php/images/<?php echo $row['img']; ?>" alt="">
+          </div>
           <div class="wrapper">
-    <section class="users">
-      
-      <div class="search">
+          
 
-        <input type="text" placeholder="Enter name to search...">
-        <button><i class="fas fa-search"></i></button>
-      </div>
-      <div class="users-list">
-  
-      </div>
-    
   <script src="javascript/users.js"></script>
 
 </body>
