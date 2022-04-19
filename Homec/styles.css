@@ -21,6 +21,15 @@ body{
     z-index: 2;
     position: relative;
 }
+#chatslateralesopen{
+    background: #0E0D11;
+    display:block;
+    float: left;
+    width: 24%;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+}
 
 #titulodgrupo{
     display: flex;
@@ -70,3 +79,43 @@ body{
 strong{
     font-family: 'Poppins', sans-serif; background: #333; color: #fff; border-radius: 18px 18px 0 18px;
 }
+
+.chat-box .chat{
+    margin: 15px 0;
+  }
+  .chat-box .chat p{
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow: 0 0 32px rgb(0 0 0 / 8%),
+                0rem 16px 16px -16px rgb(0 0 0 / 10%);
+  }
+  .chat-box .outgoing{
+    display: flex;
+  }
+  .chat-box .outgoing .details{
+    margin-left: auto;
+    max-width: calc(100% - 130px);
+  }
+  .outgoing .details {
+    background: #333;
+    color: #fff;
+    border-radius: 18px 18px 0 18px;
+  }
+  .chat-box .incoming{
+    display: flex;
+    align-items: flex-end;
+  }
+  .chat-box .incoming img{
+    height: 35px;
+    width: 35px;
+  }
+  .chat-box .incoming .details{
+    margin-right: auto;
+    margin-left: 10px;
+    max-width: calc(100% - 130px);
+  }
+  .incoming .details p{
+    background: #fff;
+    color: #333;
+    border-radius: 18px 18px 18px 0;
+  }

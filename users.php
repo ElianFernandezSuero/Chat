@@ -4,10 +4,10 @@
   session_start();
   include_once "php/config.php";
   if(!isset($_SESSION['unique_id'])){
-    header("location: Homec/home.php");
+    header("location: chat2.php");
   }
 ?>
-<?php include_once "Homec/home.php"; ?>
+<?php include_once "chat2.php"; ?>
 <body>
 
           <?php 
@@ -16,19 +16,8 @@
               $row = mysqli_fetch_assoc($sql);
             }
           ?>
-          <img style="position: relative; bottom: 891px; width: 60px; border-radius: 100%; left: 104px; z-index: 2; cursor: pointer;"src="php/images/<?php echo $row['img']; ?>" alt="">
-         
-          <div class="wrapper">
-    <section class="users">
-      
-      <div class="search">
-
-        <input type="text" placeholder="Enter name to search...">
-        <button><i class="fas fa-search"></i></button>
-      </div>
-      <div class="users-list">
-  
-      </div>
+          <img style="position: relative;bottom: 891px;width: 60px;border-radius: 100%;left: 104px;z-index: 2;cursor: pointer;height: 60px;"src="php/images/<?php echo $row['img']; ?>" alt="">
+          
     
   <script src="javascript/users.js"></script>
 

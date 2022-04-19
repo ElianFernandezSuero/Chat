@@ -33,6 +33,11 @@ body{
     position: relative;
 }
 
+#chatslateralesopen img{
+    display:block;
+    float: left;
+}
+
 #titulodgrupo{
     display: flex;
     background: #1C1B1F;
@@ -79,30 +84,41 @@ body{
     display: flex;
     align-items: center;
     padding-bottom: 0px;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #504E4E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     justify-content: space-between;
     padding-bottom: 10px;
+    margin-left: 30px;
   }
 
   .users header img{
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 40px;
   }
 
+  .users-list{
+    max-height: 350px;
+    overflow-y: auto;
+  }
+  .users .search {
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
   .chat-area header img{
-    height: 45px;
-    width: 45px;
+    height: 20px;
+    width: 20px;
     margin: 0px 0px;
   }
   .users-list a img {
-    height: 58px;
-    position: relative ;
-    width: 60px;
+    height: 68px;
+    width: 68px;
     border-radius: 100%;
-    left: 104px;
     z-index: 2;
     cursor: pointer;
-    bottom: 762px;
 }
 
 .wrapper img {
@@ -128,6 +144,29 @@ border-right: 1px solid #17181a;
     display: flex;
     align-items: center;
     flex-direction: row;
+    padding-top: 20px;
+}
+
+.details{
+    padding-left: 20px;
+    border-top-width: 5px;
+    padding-top: 5px;
+}
+
+div.content > div > p{
+    margin-top: 4px;
+    color: #676666;
+    font-family: 'Istok Web', sans-serif;
+    
+}
+div.content > div > span{
+    color: #FFFFFF;
+    font-family: 'Inria Sans', sans-serif;
+    
+}
+a{
+    text-decoration: none;
+    
 }
 
 .chat-box .chat{

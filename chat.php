@@ -18,8 +18,7 @@
           ?>
           
           <div class="usuarioimg ">
-          <img style="position: relative; bottom: 891px; width:70px; height: 70px; border-radius: 100%; left: 100px; z-index: 2; cursor: pointer;"src="php/images/<?php echo $row['img']; ?>" alt="">
-          </div>
+          <img style="position: relative;bottom: 891px;width: 55px;border-radius: 100%;left: 104px;z-index: 2;cursor: pointer;border-top-width: 20px;margin-top: 3px;margin-left: 5px;" src="php/images/1650224994a.jpg" alt=""></div>
           <div class="wrapper">
           
 

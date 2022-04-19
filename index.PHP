@@ -11,7 +11,7 @@ if($_POST) {
         $row = mysqli_fetch_assoc($query);
         session_start();
         $_SESSION['user'] = $row['user'];
-        header('location:Homec/home.php');
+        header('location:chat2.php');
     } else {
         echo "<script> alert('El nombre o la contraseña están incorrectos.'); </script>";
     }
